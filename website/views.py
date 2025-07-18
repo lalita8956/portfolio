@@ -1,11 +1,10 @@
-from django.shortcuts import render , HttpResponse
-import requests
+from django.shortcuts import render 
+from blog.models import Post
 
 
 def index(request):
-    return render(request,template_name="website/index.html")
+    Posts = Post.objects.all()
+    return render(request,'website/index.html',{'posts': Posts})
 
-def assets(request):
-    return render(request,template_name="website/assets")
 
     
