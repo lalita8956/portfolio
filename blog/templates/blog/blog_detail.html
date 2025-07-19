@@ -4,31 +4,48 @@
     body{
         background-color:powderblue;
     }
-   
+   h1{
+        text-align:center;
+        font-size: 50px;
+   }
+   p{
+    font-size: 20px;
+   }
 
 
-
+.row {
+  display: flex;
+}
+    .column {
+  flex: 50%;
+  padding: 10px;
+  height: 500px; 
+}
+.button{
+    text-align: center;
+}
 
 
 </style>
 </head>
 <body>
- <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h1>{{post.title}}</h1>
-      </div>
 
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+<h1>{{post.title}}</h1>
+<div class="row" data-aos="fade-up">
+        
+    <div class="column">
+        <img src="{{ post.image.url }}" height="400px"></img>
+    </div>
+<div class="">
+                <p>{{post.content}}</p>
+</div>
+</div>
+    <div class="button">
+        <form action="{% url 'like_post' post.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="submit">like &#x1F90E;</button>
+        </form>
+    </div>
 
-        <div class="row">
-            <img style="border: 0px solid red; border-radius: 10px;" src="{{ post.image.url }}" height="400px"></a>
-        </div>
-        <div class="row">
-            <div class="col">
-               
-            <h3><li>{{post.content}}</li></h3>
-                
-            </div>
-        </div>
-      </div>
-    </body>   
-</htmlL>
+</body>
+</html>

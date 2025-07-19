@@ -302,13 +302,21 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        <h3>Number Kundali </h3>
+        <h3>1) Number Kundali </h3>
+        <img src="{% static 'website/assets/img/images.jpeg' %}" class="img-fluid" alt="" width="200px">
         <a href="https://github.com/lalita8956/Number-Kundali.git" class="button"> Code</button></a>
         </div>
 
       <div class="container section-title" data-aos="fade-up">
-        <h3>Polls App</h3>
+        <h3>2) Polls App</h3>
+        <img src="{% static 'website/assets/img/unnamed (1).png' %}" class="img-fluid" alt="" width="200px">
         <a href="https://github.com/lalita8956/djangotutorial.git" class="button"> Code</button></a>
+
+      <div class="container section-title" data-aos="fade-up">
+        <h3>3) Weather app </h3>
+        <img src="{% static 'website/assets/img/weather.png' %}" class="img-fluid" alt="" width="200px">
+        <a href="https://github.com/lalita8956/weather_app.git" class="button"> Code</button></a>
+        </div>
       </div><!-- End Section Title -->
     </section><!-- /Project Section -->
 
@@ -327,8 +335,8 @@
                 
                   <div class="text mt-3">
 
-                  <h3 class="heading"><a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h3>
-                  <a href="{% url 'blog_detail' post.slug %}"><p>{{ post.content|truncatewords:0 }}</p>
+                  <h3 class="heading"><a href="{% url 'blog_detail' post.id %}">{{ post.title }}</a></h3>
+                  <a href="{% url 'blog_detail' post.id %}"><p>{{ post.content|truncatewords:0 }}</p>
                   <div class="meta">
                  <div><h5><a href="#"><span class="icon-calendar"></span> {{ post.created_at }}</a></h5></div>
             </div>
