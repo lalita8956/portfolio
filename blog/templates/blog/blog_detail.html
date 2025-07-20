@@ -43,7 +43,7 @@
     <div class="button">
         <form action="{% url 'like_post' post.id %}" method="post">
             {% csrf_token %}
-            <button type="submit" class="submit">like &#x1F90E;</button>
+            <button type="submit" class="submit"><h4>Like &#x1F90E;{{post.likes}}</h4></button>
         </form>
     </div>
 

@@ -336,9 +336,11 @@
                   <div class="text mt-3">
 
                   <h3 class="heading"><a href="{% url 'blog_detail' post.id %}">{{ post.title }}</a></h3>
+                    <p>Likes&#x1F90E; {{post.likes}}</p>
                   <a href="{% url 'blog_detail' post.id %}"><p>{{ post.content|truncatewords:0 }}</p>
                   <div class="meta">
-                 <div><h5><a href="#"><span class="icon-calendar"></span> {{ post.created_at }}</a></h5></div>
+                 <div><a href="#"><span class="icon-calendar"></span> {{ post.created_at }}</a></div>
+                 
             </div>
           </div>
         </div>
